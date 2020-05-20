@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Book = require("../models/books");
+const Book = require("../models/book");
 
 router.get("/", async (req, res) => {
     let books = [];
