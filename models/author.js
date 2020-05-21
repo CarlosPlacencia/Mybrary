@@ -9,7 +9,6 @@ const authorSchema = new mongoose.Schema({
 });
 
 authorSchema.pre('remove', function(next){
-    console.log("im inside the pre/remove");
     Book.find({author: this.id}, (err, books) => {
         if(err){ 
             next(err)
